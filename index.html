@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSE Connection - Airport Ground Support Equipment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3a8a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .services {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 2rem;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3a8a;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .equipment-types {
+            background: #f8fafc;
+            padding: 80px 2rem;
+        }
+
+        .equipment-types h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1e3a8a;
+        }
+
+        .equipment-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .equipment-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .contact {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1e3a8a;
+        }
+
+        .contact-info {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            color: #555;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .services h2, .equipment-types h2, .contact h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GSE CONNECTION</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Expert Ground Support Equipment Solutions</h1>
+        <p>Manufacturing & Refurbishing Premium Airport GSE</p>
+        <a href="#contact" class="cta-button">Get In Touch</a>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Manufacturing</h3>
+                <p>Custom-built ground support equipment designed to meet your specific operational needs. We manufacture high-quality GSE using industry-leading standards and materials.</p>
+            </div>
+            <div class="service-card">
+                <h3>Refurbishment</h3>
+                <p>Extend the life of your existing equipment with our comprehensive refurbishment services. We restore GSE to like-new condition, ensuring optimal performance and safety.</p>
+            </div>
+            <div class="service-card">
+                <h3>Quality Assurance</h3>
+                <p>Every piece of equipment undergoes rigorous testing and inspection to meet aviation industry standards and exceed customer expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipment-types">
+        <h2>Equipment We Service</h2>
+        <div class="equipment-list">
+            <div class="equipment-item">✈️ Aircraft Tugs & Tractors</div>
+            <div class="equipment-item">🔌 Ground Power Units (GPU)</div>
+            <div class="equipment-item">❄️ Air Conditioning Units</div>
+            <div class="equipment-item">🚛 Baggage Tractors</div>
+            <div class="equipment-item">📦 Cargo Loaders</div>
+            <div class="equipment-item">🪜 Passenger Stairs</div>
+            <div class="equipment-item">⛽ Refueling Equipment</div>
+            <div class="equipment-item">🔧 Maintenance Platforms</div>
+            <div class="equipment-item">💧 Lavatory Service Vehicles</div>
+            <div class="equipment-item">🧊 De-icing Equipment</div>
+            <div class="equipment-item">🚚 Belt Loaders</div>
+            <div class="equipment-item">⚡ Start Units</div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to discuss your ground support equipment needs? We're here to help.</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> info@gseconnection.com</p>
+            <p><strong>Phone:</strong> [Your Phone Number]</p>
+            <p><strong>Location:</strong> [Your Location]</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 GSE Connection. All rights reserved.</p>
+        <p>Professional Airport Ground Support Equipment Manufacturing & Refurbishment</p>
+    </footer>
+</body>
+</html>
